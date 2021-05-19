@@ -24,9 +24,24 @@
             <h2 class="alternate">Learn how playing outdoors in nature can benefit your children intellectually,
             socially, emotionally, and physically, and discover activities for fostering their development.</h2>
           </text-block>
-
-          <img id="blueElephant" src="img/example2.png" alt="">
-        </div>
+          <picture>
+            <source type="image/avif"
+              srcset='
+              /img/windows-1000.avif 1000w,
+              /img/windows-800.avif 800w,
+              /img/windows-600.avif 600w,
+              /img/windows-400.avif 400w,'
+              sizes='(min-width: 500px) 700px, 100vw'>
+            <source type="image/jpg"
+              srcset='
+              /img/windows-1000.jpg 1000w,
+              /img/windows-800.jpg 800w,
+              /img/windows-600.jpg 600w,
+              /img/windows-400.jpg 400w,'
+              sizes='(min-width: 500px) 700px, 100vw'>
+            <img id="blueElephant" src='/img/windows-400.jpg' width="400px" height="467" alt='children playing in different circumstances'>
+          </picture>
+          </div>
       </div>
 		</div>
 	</div>
@@ -133,7 +148,7 @@
   /* slide over group 2 */
 }
 #group1 .parallax__layer--base {
-  background-image: url("/img/Optimized/md-logBalance.jpg");
+  background-image: url("/img/logBalance-665.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -144,13 +159,16 @@
 }
 #blueElephant {
   padding: 50px 0 50px 0 ;
+  height: auto;
+  width: 90%;
+  max-width: 95vw;
 }
 #group3 {
   z-index: 11;
   /* slide over group 2 and 4 */
 }
 #group3 .parallax__layer--base {
-  background-image: url("/img/Optimized/hg-Kiss.jpg");
+  background-image: url("/img/cheek-667.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -173,8 +191,12 @@
 }
 @media screen and (min-width: 780px) {
 	#group1 .parallax__layer--base {
-		background-image: url("/img/Optimized/hg-forestToddle.jpg");
+		background-image: url("/img/kiss-1000.jpg");
 	}
+  #group3 .parallax__layer--base {
+		background-image: url("/img/kiss-1000.jpg");
+	}
+
   #blueElephant {
     padding: 50px;
     width: 40vw;

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather&display=swap');
-
 body, html {
   background-color: #fff;
 }
@@ -13,7 +11,10 @@ body, html {
     font-family: Bodoni;
     src: url("/fonts/bodoni.woff2") format("woff2");
   }
-
+@font-face {
+  font-family: Lora;
+  src: url("/fonts/Lora-Regular.woff2") format("woff2");
+}
 h1 {
     font-family: "Bodoni", serif;
     font-style: normal;

@@ -4,9 +4,8 @@
 
 
 <nav>
-
-	<a href="."><img id="logo" src="img/logo_v1.svg" alt=""></a>
-	<div>
+  <a href="."><img id="logo" src="img/logo_v1.svg" alt=""></a>
+	<div id="menu-wrapper">
 
 		<div class="responsiveicons">
 		<a href="#menuItems">
@@ -141,6 +140,28 @@ nav a:hover {
 #menuItems:target {
   display: block;
   background-color: #dcd4bc;
+}
+
+/* Animation */
+#logo {
+    position: relative;
+    left: -90%;
+    animation: rollIn 1s  0.2s forwards;
+    animation-timing-function: cubic-bezier(0, 0, 0.43, 1.58);
+}
+@keyframes rollIn {
+    0% { left: -90%; transform:rotate(-180deg); }
+    100% { left: 0%; transform:rotate(0deg); }
+}
+#menu-wrapper {
+    position: relative;
+    opacity: 0%;
+    animation: fadeIn 1s 0.2s forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes fadeIn {
+    0% { opacity: 0%;}
+    100% { opacity: 100%;}
 }
 </style>
 
