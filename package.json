@@ -1,5 +1,5 @@
 {
-  "name": "LittleAdventurers",
+  "name": "little-adventurers",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
@@ -24,6 +24,7 @@
   "dependencies": {
     "@fontsource/fira-mono": "^4.2.2",
     "@lukeed/uuid": "^2.0.0",
+    "@tryghost/content-api": "^1.5.6",
     "cookie": "^0.4.1"
   }
 }
