@@ -2,77 +2,107 @@
 	<title>HomePage Little Adventurers!</title>
 </svelte:head>
 
-<div class="parallax">
+<div id="group1" class="parallax__group">
+  <div class="parallax__layer parallax__layer--base">
+    <picture>
+      <source type="image/avif" srcset='/img/logBalance-665.avif 665w' media="(max-width: 1000px)" sizes='100vw'>
+      <source type="image/jpg" srcset='/img/logBalance-665.jpg 665w' media="(max-width: 1000px)" sizes='100vw'>
+      <source type="image/avif" srcset='
+                                      /img/walkOnBeach-1000.avif 1000w,
+                                      /img/walkOnBeach-1200.avif 1200w,
+                                      /img/walkOnBeach-1400.avif 1400w,
+                                      /img/walkOnBeach-1600.avif 1600w,
+                                      /img/walkOnBeach-1800.avif 1800w,
+                                      /img/walkOnBeach-2000.avif 2000w,' media="(min-width: 1000px)" sizes='100vw'>
+      <source type="image/jpg" srcset='
+                                      /img/walkOnBeach-1000.jpg 1000w,
+                                      /img/walkOnBeach-1200.jpg 1200w,
+                                      /img/walkOnBeach-1400.jpg 1400w,
+                                      /img/walkOnBeach-1600.jpg 1600w,
+                                      /img/walkOnBeach-1800.jpg 1800w,
+                                      /img/walkOnBeach-2000.jpg 2000w,' media="(min-width: 1000px)" sizes='100vw'>
+      <img src='/img/logBalance-665.jpg' width="100vw" height="100%" alt='vortex of leaves blown around smiling child'>
+    </picture>
+  </div>
+  <div class="parallax__layer parallax__layer--fore">
+    <div class="title">
+      <h1>Little Adventurers</h1>
+      <h2>Outdoor activities and creative Workshops for kids in the Algarve Portugal.</h2>
+      <h2>Created from the love of working with kids.</h2>
+      <button>Book Now</button>
+    </div>
+  </div>
+</div>
 
-	<div id="group1" class="parallax__group">
-		<div class="parallax__layer parallax__layer--base"></div>
-		<div class="parallax__layer parallax__layer--fore">
-		<div class="title">
-			<h1>Little Adventurers</h1>
-			<h2>Outdoor activities and creative Workshops for kids in the Algarve Portugal.</h2>
-		</div>
-		</div>
-	</div>
+<div id="group2">
+  <div>
+    <h2 class="alternate">The Algarve offers the perfect place to go outside and enjoy the beauty of nature. I
+    want to combine playing and learning for kids.</h2>
+    <h2 class="alternate">Learn how playing outdoors in nature can benefit your children intellectually,
+    socially, emotionally, and physically, and discover activities for fostering their development.</h2>
+  </div>
+  <picture>
+    <source type="image/avif"
+      srcset='
+      /img/windows-1000.avif 1000w,
+      /img/windows-800.avif 800w,
+      /img/windows-600.avif 600w,
+      /img/windows-400.avif 400w,'
+      sizes='(min-width: 500px) 700px, 100vw'>
+    <source type="image/jpg"
+      srcset='
+      /img/windows-1000.jpg 1000w,
+      /img/windows-800.jpg 800w,
+      /img/windows-600.jpg 600w,
+      /img/windows-400.jpg 400w,'
+      sizes='(min-width: 500px) 700px, 100vw'>
+    <img src='/img/windows-400.jpg' width="400px" height="467" alt='children playing in different circumstances'>
+  </picture>
+</div>
 
-	<div id="group2" class="parallax__group">
-		<div class="parallax__layer parallax__layer--base">
-      <div class="alternate-title">
-        <div class="flex-container">
-          <text-block>
-            <h2 class="alternate">The Algarve offers the perfect place to go outside and enjoy the beauty of nature. I
-            want to combine playing and learning for kids.</h2>
-            <h2 class="alternate">Learn how playing outdoors in nature can benefit your children intellectually,
-            socially, emotionally, and physically, and discover activities for fostering their development.</h2>
-          </text-block>
-          <picture>
-            <source type="image/avif"
-              srcset='
-              /img/windows-1000.avif 1000w,
-              /img/windows-800.avif 800w,
-              /img/windows-600.avif 600w,
-              /img/windows-400.avif 400w,'
-              sizes='(min-width: 500px) 700px, 100vw'>
-            <source type="image/jpg"
-              srcset='
-              /img/windows-1000.jpg 1000w,
-              /img/windows-800.jpg 800w,
-              /img/windows-600.jpg 600w,
-              /img/windows-400.jpg 400w,'
-              sizes='(min-width: 500px) 700px, 100vw'>
-            <img id="blueElephant" src='/img/windows-400.jpg' width="400px" height="467" alt='children playing in different circumstances'>
-          </picture>
-          </div>
-      </div>
-		</div>
-	</div>
+<div id="group3">
+  <picture>
+    <source type="image/avif" srcset='/img/cheek-667.avif 665w' media="(max-width: 700px)" sizes='100vw'>
+    <source type="image/jpg" srcset='/img/cheek-667.jpg 665w' media="(max-width: 700px)" sizes='100vw'>
+    <source type="image/avif" srcset='
+                                    /img/kiss-1000.avif 1000w' media="(min-width: 700px)" sizes='100vw'>
+    <source type="image/jpg" srcset='
+                                    /img/kiss-1000.jpg 1000w' media="(min-width: 700px)" sizes='100vw'>
+    <img src='/img/cheek-667.jpg' width="100vw" height="100%" alt='vortex of leaves blown around smiling child'>
+  </picture>
+</div>
 
-	<div id="group3" class="parallax__group">
-		<div class="parallax__layer parallax__layer--base"></div>
-		<div class="parallax__layer parallax__layer--fore">
-		<div class="title">
-			<div></div>
-			<h1>Little Adventurers</h1>
-			<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sequi cupiditate libero, magnam
-			adipisci, ut maiores repellat voluptas sit eos praesentium laboriosam rem! Natus vitae porro eligendi
-			tempore libero error.</h2>
-		</div>
-		</div>
-	</div>
-
-	<div id="group4" class="parallax__group">
-		<div class="parallax__layer parallax__layer--base">
-			<div class="title">
-				<div class="fullwidth">
-				<h2 class="alternate">The Algarve offers the perfect place to go outside and enjoy the beauty of nature. I
-					want to combine playing and learning for kids.</h2>
-				<h2 class="alternate">Learn how playing outdoors in nature can benefit your children intellectually,
-					socially, emotionally, and physically, and discover activities for fostering their development.</h2>
-				</div>
-				<img src="img/logo_v1.svg" alt="">
-			</div>
-		</div>
-	</div>
-
+<div id="group4">
+  <div class="half">
+    <div class="quater">
+      <h2 class="alternate">I believe each child is a unique "being" that learns and sprouts in creative settings, where they can embrace ideas and reveal their unlimited potential.
+        </h2>
+      <h2 class="alternate">Children should develop freely in nature, playing and discovering together.</h2>
+    </div>
+    <div class="quater">
+      <picture>
+        <source type="image/avif"srcset='/img/climbTree-400.avif 400w' sizes='400px'>
+        <source type="image/jpg"srcset='/img/climbTree-400.jpg 400w' sizes='400px'>
+        <img src='/img/climbTree-400.jpg' width="400px" height="400px" alt='two children climbing a tree'>
+      </picture>
+    </div>
+  </div>
+  <div class="half">
+    <div class="quater">
+      <h2 class="alternate">Learning through exercise outdoors is main motor for cognitive development
+        In the early years it is about configuring imaginations, there is no creative `wrong`.
+        </h2>
+      <h2 class="alternate">I each child to see the beauty, light, forms and patterns in everyday objects.</h2>
+    </div>
+    <div class="quater">
+      <picture>
+        <source type="image/avif"srcset='/img/leaves-400.avif 400w' sizes='400px'>
+        <source type="image/jpg"srcset='/img/leaves-400.jpg 400w' sizes='400px'>
+        <img src='/img/leaves-400.jpg' width="400px" height="400px" alt='vortex of leaves blown around smiling child'>
+      </picture>
+    </div>
+  
+  </div>
 </div>
 
 <style>
@@ -85,30 +115,12 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.alternate-title {
-  display: block;
-  margin: auto;
-  text-align: center;
-  max-width: 90vw;
-}
 .alternate {
-  color: rgb(198, 142, 93);
+  color: var(--primary-dark);
   text-align: justify;
 }
 /* Parallax base styles
   --------------------------------------------- */
-.parallax {
-  background-color: #dcd4bc;
-  height: 500px;
-  /* fallback for older browsers */
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-  -webkit-perspective-origin-x: 100%;
-  -ms-perspective-origin-x: 100%;
-}
 
 .parallax__group {
   position: relative;
@@ -144,40 +156,81 @@
 /* style the groups
   --------------------------------------------- */
 #group1 {
+  margin-top: 10px;
   z-index: 5;
   /* slide over group 2 */
 }
-#group1 .parallax__layer--base {
-  background-image: url("/img/logBalance-665.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+#group1 img{
+  object-fit: cover;
+  height: 100%;
+  width:100%;
 }
+button {
+  font-family: 'Lora', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5em;
+  border: 3px solid var(--primary-light);
+  padding: 15px 30px;
+  color: var(--primary-light);
+  background-color: transparent;
+  transition-duration: 0.4s;
+}
+button:hover {
+  color: oldlace;
+  background-color: var(--primary-dark);
+}
+
 #group2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  margin: var(--section-gap) 0;
   z-index: 10;
+  position: relative;
+
   /* slide under groups 1 and 3 */
 }
-#blueElephant {
-  padding: 50px 0 50px 0 ;
+#group2 > div {
+  padding: 50px;
+  width: clamp(400px, 700px, 1000px);
+}
+#group2 img {
+  padding: 50px;
   height: auto;
-  width: 90%;
-  max-width: 95vw;
+  width: 400px;
 }
 #group3 {
-  z-index: 11;
-  /* slide over group 2 and 4 */
+  height: 700px;
+  /* fallback for older browsers */
 }
-#group3 .parallax__layer--base {
-  background-image: url("/img/cheek-667.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+#group3 img {
+  object-fit: cover;
+  width: 100%;
+  height: 700px;
 }
 #group4 {
-  min-height: 800px;
-  overflow: hidden;
-  z-index: 5;
-  /* slide under group 3 and 5 */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 700px;
+  justify-content: center;
+  align-content: center;
+  margin: var(--section-gap) 0;
+}
+div.half {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 840px;
+  justify-content: center;
+}
+div.quater {
+  width: 400px;
+  padding: 10px;
 }
 .flex-container {
   display: -webkit-box;
@@ -190,18 +243,6 @@
   min-height: 200px;
 }
 @media screen and (min-width: 780px) {
-	#group1 .parallax__layer--base {
-		background-image: url("/img/kiss-1000.jpg");
-	}
-  #group3 .parallax__layer--base {
-		background-image: url("/img/kiss-1000.jpg");
-	}
-
-  #blueElephant {
-    padding: 50px;
-    width: 40vw;
-    max-width: 500px;
-  }
   .flex-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -215,6 +256,7 @@
     max-width: 1000px;
   }
 }
+
 
 /*# sourceMappingURL=app.css.map */
 </style>
