@@ -1,0 +1,59 @@
+
+
+---------------
+IMG TAG
+---------------
+<img
+  width=''
+  height=''
+  sizes='(max-width: 3500px) 40vw, 1400px'
+  srcset='
+    contactbig-1000.jpg 1000w,
+    contactbig-1200.jpg 1200w,
+    contactbig-1400.jpg 1400w,
+    contactbig-1600.jpg 1600w,
+    contactbig-1800.jpg 1800w,
+    contactbig-2000.jpg 2000w,
+    contactbig-2400.jpg 2400w,'
+  src='This should hold the default image'
+  loading='lazy'
+  decoding='async'
+  alt=''>
+
+---------------
+CSSLINK
+---------------
+<link
+  rel='preload'
+  as='image'
+  href='This should hold the default image'
+  srcset='
+    contactbig-1000.jpg 1000w,
+    contactbig-1200.jpg 1200w,
+    contactbig-1400.jpg 1400w,
+    contactbig-1600.jpg 1600w,
+    contactbig-1800.jpg 1800w,
+    contactbig-2000.jpg 2000w,
+    contactbig-2400.jpg 2400w,'
+  imagesizes='50vw'>
+
+---------------
+PICTURE TAG
+---------------
+   A Source for one of avif webp and jxl should also be added
+<picture>
+    <source
+        media='(orientation: landscape)'
+        srcset='
+    contactbig-1000.jpg 1000w,
+    contactbig-1200.jpg 1200w,
+    contactbig-1400.jpg 1400w,
+    contactbig-1600.jpg 1600w,
+    contactbig-1800.jpg 1800w,
+    contactbig-2000.jpg 2000w,
+    contactbig-2400.jpg 2400w,'
+        sizes='(min-width: 60rem) 80vw,
+               (min-width: 40rem) 90vw,
+               100vw'>
+    <img src='This should hold the default image.jpg' alt='Image description'>
+</picture>

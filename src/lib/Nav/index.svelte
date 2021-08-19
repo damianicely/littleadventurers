@@ -4,9 +4,9 @@
 
 <nav>
 	<a href="."><img id="logo" src="{logo}" alt="Circular Logo of Little Adventurers. Animated to roll in from the left."></a>
-	<div id="menu-wrapper">
 
-		<div class="responsiveicons">
+	<div id="menu-wrapper">
+		<div>
 			<a href="#menuItems">
 				<svg id="hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none"
 				stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
@@ -16,11 +16,10 @@
 		</div>
 
 		<ul id="menuItems">
-			<li><a href="/">Home</a></li>
-			<li id="menuFix"><a href="activities">Activities </a></li>
-			<li><a href="/about"> About</a></li>
-			<li><a href="/contact">Contact</a></li>
-			<li><a href="/blog">Blog</a></li>
+			<li><a href="/#top">Home</a></li>
+			<li><a href="activities/#top">Activities </a></li>
+			<li><a href="about/#top"> About</a></li>
+			<li><a href="contact/#top">Contact</a></li>
 			<li id="close">
 				<a href="#top">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -77,6 +76,8 @@ nav {
           justify-content: center;
   justify-items: center;
   list-style-type: none;
+  font-family: "ClaudeSansPlain-Regular";
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 900px) {
@@ -93,10 +94,10 @@ nav :first-child {
 
 nav a {
   color: white;
-  font-family: Bodoni, Arial, Helvetica, sans-serif;
   font-size: calc(1.3em + 0.5vh);
-  font-weight: 600;
+  font-weight: 300;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 nav a:hover {
@@ -105,8 +106,15 @@ nav a:hover {
 
 #menuItems:target {
   display: block;
-  background-color: var(--background);
+  background-color: var(--primary-dark);
 }
+
+
+
+
+
+
+
 
 /* Animation */
 #logo {
@@ -143,9 +151,6 @@ nav a:hover {
   }
   li+#menuFix {
     width: 120px;
-  }
-  #menuItems li:hover {
-    background-color: var(--background);
   }
   #close {
     visibility: hidden;

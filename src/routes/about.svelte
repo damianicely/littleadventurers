@@ -5,37 +5,38 @@
 
     <div id="portrait">
         <picture>
-            <source
-                type="image/avif"
-                srcset="
-                /img/Optimized/beachDay-400.avif 400w,
-                /img/Optimized/beachDay-600.avif 600w,
-                /img/Optimized/beachDay-800.avif 800w,
-                /img/Optimized/beachDay-1000.avif 1000w,
-                /img/Optimized/beachDay-1500.avif 1500w,
-                /img/Optimized/beachDay-1800.avif 1800w,
-                /img/Optimized/beachDay-2000.avif 2000w,"
-                sizes="(max-width: 1200px) 100vw, 50vw"/>
-            <source
-                type="image/jpg"
-                srcset="
-                /img/Optimized/beachDay-400.jpg 400w,
-                /img/Optimized/beachDay-600.jpg 600w,
-                /img/Optimized/beachDay-800.jpg 800w,
-                /img/Optimized/beachDay-1000.jpg 1000w,
-                /img/Optimized/beachDay-1500.jpg 1500w,
-                /img/Optimized/beachDay-1800.jpg 1800w,
-                /img/Optimized/beachDay-2000.jpg 2000w,"
-                sizes="(max-width: 1200px) 100vw, 50vw"/>
-            <img src="/img/Optimized/beachDay-400.jpg" alt="Kata playing with a girl at the beach" />
+            <source type="image/avif" srcset='
+                        /img/Optimized/kata1-600.avif 600w
+                        /img/Optimized/kata1-800.avif 800w
+                        /img/Optimized/kata1-1000.avif 1000w
+                        /img/Optimized/kata1-1200.avif 1200w' media="(max-width: 1200px)" sizes='100vw'>
+            <source type="image/jpg" srcset='
+                        /img/Optimized/kata1-600.jpg 600w
+                        /img/Optimized/kata1-800.jpg 800w
+                        /img/Optimized/kata1-1000.jpg 1000w
+                        /img/Optimized/kata1-1200.jpg 1200w' media="(max-width: 1200px)" sizes='100vw'>
+            <source type="image/avif" srcset='
+                                            /img/Optimized/kata2-1400.avif 1400w,
+                                            /img/Optimized/kata2-1600.avif 1600w,
+                                            /img/Optimized/kata2-1800.avif 1800w,
+                                            /img/Optimized/kata2-2000.avif 2000w,
+                                            /img/Optimized/kata2-2200.avif 2200w,
+                                            /img/Optimized/kata2-2400.avif 2400w,' media="(min-width: 1200px)" sizes='65vw'>
+            <source type="image/jpg" srcset='
+                                            /img/Optimized/kata2-1400.jpg 1400w,
+                                            /img/Optimized/kata2-1600.jpg 1600w,
+                                            /img/Optimized/kata2-1800.jpg 1800w,
+                                            /img/Optimized/kata2-2000.jpg 2000w,
+                                            /img/Optimized/kata2-2200.jpg 2200w,
+                                            /img/Optimized/kata2-2400.jpg 2400w,' media="(min-width: 1200px)" sizes='65vw'>
+            <img src='/img/Optimized/kata1.jpg' width="100vw" height="100%" alt='Kata smiling and looking down'>
         </picture>
-
     </div>
 
     <div id="aboutKata">
-        <h1>Katarina</h1>
-        <p class="subheading">Child Development Specialist | Activity coordinator</p>
-        <p> I have always been a lover of sports and nature. Especially surfing which combines that.
+        <h1 class="alternate">Katharina</h1>
+        <p class="subheading">Child Development Specialist - Activity coordinator</p>
+        <p> I have always been a lover of sports and    nature. Especially surfing which combines that.
         I started as a young teenager working with kids (babysitting, kindergarten) and that was the moment I found out
         that I love working with kids.</p>
 
@@ -63,7 +64,7 @@
 <style>
 
 #about {
-    margin-top: 80px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -100,7 +101,19 @@
 h1 {
     margin-top: 50px;
     padding-left: 30px;
+    font-size: 2.5em;
 }
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (min-width: 1700px) {
+  h1 {
+    font-size: 6em;
+  }
+}
+
 p {
     padding:10px 15px 10px 30px;
 }

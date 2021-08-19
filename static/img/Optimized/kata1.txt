@@ -1,0 +1,50 @@
+
+
+---------------
+IMG TAG
+---------------
+<img
+  width=''
+  height=''
+  sizes='(max-width: 3500px) 40vw, 1400px'
+  srcset='
+    kata1-1200.jpg 1200w,
+    kata1-1000.jpg 1000w,
+    kata1-800.jpg 800w,
+    kata1-600.jpg 600w,'
+  src='This should hold the default image'
+  loading='lazy'
+  decoding='async'
+  alt=''>
+
+---------------
+CSSLINK
+---------------
+<link
+  rel='preload'
+  as='image'
+  href='This should hold the default image'
+  srcset='
+    kata1-1200.jpg 1200w,
+    kata1-1000.jpg 1000w,
+    kata1-800.jpg 800w,
+    kata1-600.jpg 600w,'
+  imagesizes='50vw'>
+
+---------------
+PICTURE TAG
+---------------
+   A Source for one of avif webp and jxl should also be added
+<picture>
+    <source
+        media='(orientation: landscape)'
+        srcset='
+    kata1-1200.jpg 1200w,
+    kata1-1000.jpg 1000w,
+    kata1-800.jpg 800w,
+    kata1-600.jpg 600w,'
+        sizes='(min-width: 60rem) 80vw,
+               (min-width: 40rem) 90vw,
+               100vw'>
+    <img src='This should hold the default image.jpg' alt='Image description'>
+</picture>

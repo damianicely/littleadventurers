@@ -1,251 +1,574 @@
-<script>
-    import { fade, fly } from 'svelte/transition';
-	let beachToggled = false;
-	let walkToggled = false;
-	let workshopToggled = false;
-</script>
-
 <svelte:head>
 	<title>Activities Page</title>
 </svelte:head>
-
-<div class="main">
-     <!-- Beach Section
-    --------------------------------------------- -->
-      
-    <div id="beach">
-        <label>
-            <div class="activityHeading">
-                <div class="activityImage">
-                    <picture>
-                        <source
-                            type="image/avif"
-                            srcset="
-                            /img/Optimized/beachDay-400.avif 400w,
-                            /img/Optimized/beachDay-600.avif 600w,
-                            /img/Optimized/beachDay-800.avif 800w,
-                            /img/Optimized/beachDay-1000.avif 1000w,
-                            /img/Optimized/beachDay-1500.avif 1500w,
-                            /img/Optimized/beachDay-1800.avif 1800w,
-                            /img/Optimized/beachDay-2000.avif 2000w,"
-                            sizes="50vw"/>
-                        <source
-                            type="image/jpg"
-                            srcset="
-                            /img/Optimized/beachDay-400.jpg 400w,
-                            /img/Optimized/beachDay-600.jpg 600w,
-                            /img/Optimized/beachDay-800.jpg 800w,
-                            /img/Optimized/beachDay-1000.jpg 1000w,
-                            /img/Optimized/beachDay-1500.jpg 1500w,
-                            /img/Optimized/beachDay-1800.jpg 1800w,
-                            /img/Optimized/beachDay-2000.jpg 2000w,"
-                            sizes="50vw"/>
-                        <img src="/img/Optimized/beachDay-400.jpg" alt="Kata playing with a girl at the beach" />
-                    </picture>
-                </div>
-                <div class="activityTitle"> <h1>Beach Days<br />
-                    {#if beachToggled}
-                        <svg width="100px" height="100px" alt="less information Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M14 22v4h20v-4H14zM24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/></svg>
-                    {:else}
-                        <svg width="100px" height="100px" alt="more information Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26 14h-4v8h-8v4h8v8h4v-8h8v-4h-8v-8zM24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/></svg>
-                    {/if}
-                </h1> </div>
-            </div>
-            <input class="hidden" type="checkbox" bind:checked={beachToggled}>
-        </label>
-        {#if beachToggled}
-        <div class="expander" in:fly="{{ y: -600, duration: 2000 }}" out:fade>
-            <div class="activityCard">
-                <h1>Let us use our beautiful beaches to create a space for kids where they can run, play, enjoy and learn.</h1>
-                <p>Depending on the age of the children I offer beach activities for kids. Creative projects, playing games, beach clean ups, …</p>
-                <p>Whether you are on vacation here or resident, I got some amazing energy-burning activities to keep kids busy!</p>
-                <p>Aside from the obligatory sandcastle building and paddling there are many other fun and creative beach activities that the kids will love.</p>
-                <p>"Kids and adults often have different wants and motivations at the beach. Kids use beach time as an opportunity to run, swim and play while parents often want to use a beach trip for a much-needed time to relax," explains Dan DeFigio, author of "Beach Games for Kids."</p>
-                <p>"Staying active is one of the best ways for kids to beat boredom at the beach. Sand and water make a different environment than the typical backyard, so kids can explore while having fun."</p>
-                <p>Check the dates and sign up your kids for some beach fun!</p>   
-            </div>
+<div class="section start">
+    <div id="nature" class="heading">
+        <div class="box">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/Optimized/beachDay-400.avif 400w,
+                    /img/Optimized/beachDay-600.avif 600w,
+                    /img/Optimized/beachDay-800.avif 800w,
+                    /img/Optimized/beachDay-1000.avif 1000w,
+                    /img/Optimized/beachDay-1500.avif 1500w"
+                    sizes="(max-width: 1000px) 100vw, 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/Optimized/beachDay-400.jpg 400w,
+                    /img/Optimized/beachDay-600.jpg 600w,
+                    /img/Optimized/beachDay-800.jpg 800w,
+                    /img/Optimized/beachDay-1000.jpg 1000w,
+                    /img/Optimized/beachDay-1500.jpg 1500w"
+                    sizes="(max-width: 1000px) 100vw, 50vw"/>
+                <img src="/img/Optimized/beachDay-400.jpg" alt="Kata playing with a child at the beach on a suunny day" />
+            </picture>    
         </div>
-        {/if}    
+        <div class="box overlay"><h1>Beach Days</h1></div>
     </div>
-
-     <!-- walk Section
-    --------------------------------------------- -->
-
-    <div id="walk" >
-        <label>
-            <div class="activityHeading">
-                <div class="activityTitle"><h1>Nature Walks<br />
-                    {#if walkToggled}
-                        <svg width="100px" height="100px" alt="less information Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M14 22v4h20v-4H14zM24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/></svg>
-                    {:else}
-                        <svg width="100px" height="100px" alt="more information Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26 14h-4v8h-8v4h8v8h4v-8h8v-4h-8v-8zM24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/></svg>
-                    {/if}
-                </h1> </div>
-                <div class="activityImage">
-                    <picture>
-                        <source
-                            type="image/avif"
-                            srcset="
-                            /img/Optimized/forestWalk-400.avif 200w,
-                            /img/Optimized/forestWalk-600.avif 300w,
-                            /img/Optimized/forestWalk-667.avif 330w"
-                            sizes="(min-width: 500px) 700px, 104vw"/>
-                        <source
-                            type="image/avif"
-                            srcset="
-                            /img/Optimized/forestWalk-400.jpg 200w,
-                            /img/Optimized/forestWalk-600.jpg 300w,
-                            /img/Optimized/forestWalk-667.jpg 300w"
-                            sizes="(min-width: 500px) 700px, 104vw"/>
-                    <img src="/img/Optimized/forestWalk-400.jpg" alt="Child standing on a big fallen log in the middle of the forest" />
-                    </picture>
-                </div>
-            </div>
-            <input class="hidden" type="checkbox" bind:checked={walkToggled}>
-        </label>
-        {#if walkToggled}
-        <div class="expander" in:fly="{{ y: -600, duration: 2000 }}" out:fade>
-            <div class="activityCard">
-                <h1>
-                    Getting outside is a great way to learn more about the environment and is vital for the kids well-being.
-                </h1>
-                <p>Having fun and enjoying life, curiosity, the joy of discovery and spontaneity is in my work the priorities for education in order to have healthy, active and life-affirming children. Nature offers the ideal conditions for that.</p>
-                <p>Kids love to play in nature. Every sensory perception is nourishment for the brain, whether balancing over trees roots, exploring nature, run, walk…</p>
-                <p>I offer different activities in nature, check the dates!</p>       
-            </div>
-        </div>
-        {/if}
+    <div class="description">
+        <h2 class="alternate">Let us use our beautiful beaches to create a space for kids where they can run, play, enjoy and learn.</h2>
+        <p>Depending on the age of the children I offer beach activities for kids. Creative projects, playing games, beach clean ups, …</p>
+        <p>Whether you are on vacation here or resident, I got some amazing energy-burning activities to keep kids busy!</p>
+        <p>Aside from the obligatory sandcastle building and paddling there are many other fun and creative beach activities that the kids will love.</p>
+        <p>"Kids and adults often have different wants and motivations at the beach. Kids use beach time as an opportunity to run, swim and play while parents often want to use a beach trip for a much-needed time to relax," explains Dan DeFigio, author of "Beach Games for Kids."</p>
+        <p>"Staying active is one of the best ways for kids to beat boredom at the beach. Sand and water make a different environment than the typical backyard, so kids can explore while having fun."</p>
+        <p>Check the dates and sign up your kids for some beach fun!</p>   
     </div>
-     <!-- workshop Section
-    --------------------------------------------- -->
-
-    <div id="workshop">
-        <label>
-            <div class="activityHeading">
-                <div class="activityImage">
-                    <picture>
-                        <source
-                            type="image/avif"
-                            srcset="
-                            /img/Optimized/workshop-400.avif 200w,
-                            /img/Optimized/workshop-600.avif 300w,
-                            /img/Optimized/workshop-800.avif 400w,
-                            /img/Optimized/workshop-1000.avif 500w,
-                            /img/Optimized/workshop-1200.avif 600w,
-                            /img/Optimized/workshop-1500.avif 750w,
-                            /img/Optimized/workshop-1800.avif 900w,
-                            /img/Optimized/workshop-2000.avif 1000w,"
-                            sizes="(min-width: 500px) 700px, 100vw"/>
-                        <source
-                            type="image/jpg"
-                            srcset="
-                            /img/Optimized/workshop-400.jpg 200w,
-                            /img/Optimized/workshop-600.jpg 300w,
-                            /img/Optimized/workshop-800.jpg 400w,
-                            /img/Optimized/workshop-1000.jpg 500w,
-                            /img/Optimized/workshop-1200.jpg 600w,
-                            /img/Optimized/workshop-1500.jpg 750w,
-                            /img/Optimized/workshop-1800.jpg 900w,
-                            /img/Optimized/workshop-2000.jpg 1000w,"
-                            sizes="(min-width: 500px) 700px, 100vw"/>
-                        <img src="/img/Optimized/workshop-400.jpg" alt="Creative workshop with crayons glue and other crafts" />
-                    </picture>
-                </div>
-                <div class="activityTitle"> <h1>Creative Workshops<br />
-                    {#if workshopToggled}
-                        <svg width="100px" height="100px" alt="less information Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M14 22v4h20v-4H14zM24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/></svg>
-                    {:else}
-                        <svg width="100px" height="100px" alt="more information Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M26 14h-4v8h-8v4h8v8h4v-8h8v-4h-8v-8zM24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16z"/></svg>
-                    {/if}
-            </h1> </div>
-            </div>
-            <input class="hidden" type="checkbox" bind:checked={workshopToggled}>
-        </label>
-        {#if workshopToggled}
-        <div class="expander" in:fly="{{ y: -600, duration: 2000 }}" out:fade>
-            <div class="activityCard">
-                <h1>
-                    Get together and let the kids express themselves freely and discover the creative spirit!
-                </h1>
-                <p>I offer creative workshops in the “ Studio Coracao” in Vila do Bispo.</p>
-                <p>Whether it’s drawing, painting, cutting, pasting, modelling, making or make believe, all children love being creative if they’re given the chance. And there’s so many important developmental benefits of creative play, why wouldn’t you want to encourage it. I want to create a space for kids where they can be creative and have fun. 
-                    Check the dates for more info. </p>
-      
-            </div>
+    <div class="gallery">
+        <div class="pic1">
+            <a href="/img/gallery/beach1-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/beach1-300.avif 300w,
+                    /img/gallery/beach1-500.avif 500w,
+                    /img/gallery/beach1-700.avif 700w,
+                    /img/gallery/beach1-900.avif 900w,
+                    /img/gallery/beach1-1100.avif 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/beach1-300.jpg 300w,
+                    /img/gallery/beach1-500.jpg 500w,
+                    /img/gallery/beach1-700.jpg 700w,
+                    /img/gallery/beach1-900.jpg 900w,
+                    /img/gallery/beach1-1100.jpg 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <img src="/img/gallery/beach1-500.jpg" alt="Katha at the beach with a toddler pointing at the horizon" />
+            </picture>
+            </a>
         </div>
-        {/if}
-    
+        <div class="pic2">
+            <a href="/img/gallery/beach2-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/beach2-300.avif 300w,
+                    /img/gallery/beach2-500.avif 500w,
+                    /img/gallery/beach2-700.avif 700w,
+                    /img/gallery/beach2-900.avif 900w,
+                    /img/gallery/beach2-1100.avif 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/beach2-300.jpg 300w,
+                    /img/gallery/beach2-500.jpg 500w,
+                    /img/gallery/beach2-700.jpg 700w,
+                    /img/gallery/beach2-900.jpg 900w,
+                    /img/gallery/beach2-1100.jpg 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <img src="/img/gallery/beach2-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic3">
+            <a href="/img/gallery/beach3-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/beach3-300.avif 300w,
+                    /img/gallery/beach3-500.avif 500w,
+                    /img/gallery/beach3-700.avif 700w,
+                    /img/gallery/beach3-900.avif 900w,
+                    /img/gallery/beach3-1100.avif 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/beach3-300.jpg 300w,
+                    /img/gallery/beach3-500.jpg 500w,
+                    /img/gallery/beach3-700.jpg 700w,
+                    /img/gallery/beach3-900.jpg 900w,
+                    /img/gallery/beach3-1100.jpg 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <img src="/img/gallery/beach3-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic4">
+            <a href="/img/gallery/beach4-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/beach4-300.avif 300w,
+                    /img/gallery/beach4-500.avif 500w,
+                    /img/gallery/beach4-700.avif 700w,
+                    /img/gallery/beach4-900.avif 900w,
+                    /img/gallery/beach4-1100.avif 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/beach4-300.jpg 300w,
+                    /img/gallery/beach4-500.jpg 500w,
+                    /img/gallery/beach4-700.jpg 700w,
+                    /img/gallery/beach4-900.jpg 900w,
+                    /img/gallery/beach4-1100.jpg 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <img src="/img/gallery/beach4-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic5">
+            <a href="/img/gallery/beach5-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/beach5-300.avif 300w,
+                    /img/gallery/beach5-500.avif 500w,
+                    /img/gallery/beach5-700.avif 700w,
+                    /img/gallery/beach5-900.avif 900w,
+                    /img/gallery/beach5-1100.avif 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/beach5-300.jpg 300w,
+                    /img/gallery/beach5-500.jpg 500w,
+                    /img/gallery/beach5-700.jpg 700w,
+                    /img/gallery/beach5-900.jpg 900w,
+                    /img/gallery/beach5-1100.jpg 1100w"
+                    sizes="100vw, @media(min-width: 100px) 50vw"/>
+                    <img src="/img/gallery/beach5-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
     </div>
 </div>
 
+<div class="section">
+    <div id="walk" class="heading">
+        <div class="box">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/Optimized/walk-400.avif 400w,
+                    /img/Optimized/walk-500.avif 500w,
+                    /img/Optimized/walk-600.avif 600w,
+                    /img/Optimized/walk-700.avif 700w,
+                    /img/Optimized/walk-800.avif 800w,
+                    /img/Optimized/walk-900.avif 900w,
+                    /img/Optimized/walk-1000.avif 1000w,
+                    /img/Optimized/walk-1100.avif 1100w"
+                    sizes="(max-width: 1000px) 100vw, 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/Optimized/walk-400.jpg 400w,
+                    /img/Optimized/walk-500.jpg 500w,
+                    /img/Optimized/walk-600.jpg 600w,
+                    /img/Optimized/walk-700.jpg 700w,
+                    /img/Optimized/walk-800.jpg 800w,
+                    /img/Optimized/walk-900.jpg 900w,
+                    /img/Optimized/walk-1000.jpg 1000w,
+                    /img/Optimized/walk-1100.jpg 1100w"
+                    sizes="(max-width: 1000px) 100vw, 50vw"/>
+                    <img src="/img/Optimized/walk-400.jpg" alt="child on nature walk holding Kata's hands" />
+            </picture>
+    
+        </div>
+        <div class="box overlay">
+            <h1>Nature Walks</h1>
+        </div>
+    </div>
+    <div class="description">
+        <h2 class="alternate">Getting outside is a great way to learn more about the environment and is vital for the kids well-being.</h2>
+        <p>Having fun and enjoying life, curiosity, the joy of discovery and spontaneity is in my work the priorities for education in order to have healthy, active and life-affirming children. Nature offers the ideal conditions for that.</p>
+        <p>Kids love to play in nature. Every sensory perception is nourishment for the brain, whether balancing over trees roots, exploring nature, run, walk…</p>
+        <p>I offer different activities in nature, check the dates!</p>       
+    </div>
+    <div class="gallery">
+        <div class="pic1">
+            <a href="/img/gallery/nature1-700.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/nature1-300.avif 300w,
+                    /img/gallery/nature1-500.avif 500w,
+                    /img/gallery/nature1-700.avif 700w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/nature1-300.jpg 300w,
+                    /img/gallery/nature1-500.jpg 500w,
+                    /img/gallery/nature1-700.jpg 700w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/nature1-500.jpg" alt="Katha at the nature with a toddler pointing at the horizon" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic2">
+            <a href="/img/gallery/nature2-700.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/nature2-300.avif 300w,
+                    /img/gallery/nature2-500.avif 500w,
+                    /img/gallery/nature2-700.avif 700w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/nature2-300.jpg 300w,
+                    /img/gallery/nature2-500.jpg 500w,
+                    /img/gallery/nature2-700.jpg 700w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/nature2-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic3">
+            <a href="/img/gallery/nature3-700.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/nature3-300.avif 300w,
+                    /img/gallery/nature3-500.avif 500w,
+                    /img/gallery/nature3-700.avif 700w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/nature3-300.jpg 300w,
+                    /img/gallery/nature3-500.jpg 500w,
+                    /img/gallery/nature3-700.jpg 700w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/nature3-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic4">
+            <a href="/img/gallery/nature4-700.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/nature4-300.avif 300w,
+                    /img/gallery/nature4-500.avif 500w,
+                    /img/gallery/nature4-700.avif 700w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/nature4-300.jpg 300w,
+                    /img/gallery/nature4-500.jpg 500w,
+                    /img/gallery/nature4-700.jpg 700w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/nature4-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic5">
+            <a href="/img/gallery/nature5-700.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/nature5-300.avif 300w,
+                    /img/gallery/nature5-500.avif 500w,
+                    /img/gallery/nature5-700.avif 700w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/nature5-300.jpg 300w,
+                    /img/gallery/nature5-500.jpg 500w,
+                    /img/gallery/nature5-700.jpg 700w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/nature5-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <a href="#workshop"></a>
+    <div class="heading">
+        <div class="box">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/Optimized/workshop-400.avif 400w,
+                    /img/Optimized/workshop-500.avif 500w,
+                    /img/Optimized/workshop-600.avif 600w,
+                    /img/Optimized/workshop-700.avif 700w,
+                    /img/Optimized/workshop-800.avif 800w,
+                    /img/Optimized/workshop-900.avif 900w,
+                    /img/Optimized/workshop-1000.avif 1000w,
+                    /img/Optimized/workshop-1100.avif 1100w"
+                    sizes="(max-width: 1000px) 100vw, 50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/Optimized/workshop-400.jpg 400w,
+                    /img/Optimized/workshop-500.jpg 500w,
+                    /img/Optimized/workshop-600.jpg 600w,
+                    /img/Optimized/workshop-700.jpg 700w,
+                    /img/Optimized/workshop-800.jpg 800w,
+                    /img/Optimized/workshop-900.jpg 900w,
+                    /img/Optimized/workshop-1000.jpg 1000w,
+                    /img/Optimized/workshop-1100.jpg 1100w"
+                    sizes="(max-width: 1000px) 100vw, 50vw"/>
+                    <img src="/img/Optimized/workshop-400.jpg" alt="childrenś hands playing at arts and crafts" />
+            </picture>  
+        </div>
+        <div class="box overlay">
+            <h1>Workshops</h1>
+        </div>
+    </div>
+    <div class="description">
+        <h2 class="alternate">Get together and let the kids express themselves freely and discover the creative spirit!</h2>
+        <p>I offer creative workshops in the “ Studio Coracao” in Vila do Bispo.</p>
+        <p>Whether it’s drawing, painting, cutting, pasting, modelling, making or make believe, all children love being creative if they’re given the chance. And there’s so many important developmental benefits of creative play, why wouldn’t you want to encourage it. I want to create a space for kids where they can be creative and have fun. 
+            Check the dates for more info. </p>
+    </div>
+    <div class="gallery">
+        <div class="pic1">
+            <a href="/img/gallery/workshop1-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/workshop1-300.avif 300w,
+                    /img/gallery/workshop1-500.avif 500w,
+                    /img/gallery/workshop1-700.avif 700w,
+                    /img/gallery/workshop1-900.avif 900w,
+                    /img/gallery/workshop1-1100.avif 1100w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/workshop1-300.jpg 300w,
+                    /img/gallery/workshop1-500.jpg 500w,
+                    /img/gallery/workshop1-700.jpg 700w,
+                    /img/gallery/workshop1-900.jpg 900w,
+                    /img/gallery/workshop1-1100.jpg 1100w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/workshop1-500.jpg" alt="Katha at the workshop with a toddler pointing at the horizon" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic2">
+            <a href="/img/gallery/workshop2-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/workshop2-300.avif 300w,
+                    /img/gallery/workshop2-500.avif 500w,
+                    /img/gallery/workshop2-700.avif 700w,
+                    /img/gallery/workshop2-900.avif 900w,
+                    /img/gallery/workshop2-1100.avif 1100w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/workshop2-300.jpg 300w,
+                    /img/gallery/workshop2-500.jpg 500w,
+                    /img/gallery/workshop2-700.jpg 700w,
+                    /img/gallery/workshop2-900.jpg 900w,
+                    /img/gallery/workshop2-1100.jpg 1100w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/workshop2-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic3">
+            <a href="/img/gallery/workshop3-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/workshop3-300.avif 300w,
+                    /img/gallery/workshop3-500.avif 500w,
+                    /img/gallery/workshop3-700.avif 700w,
+                    /img/gallery/workshop3-900.avif 900w,
+                    /img/gallery/workshop3-1100.avif 1100w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/workshop3-300.jpg 300w,
+                    /img/gallery/workshop3-500.jpg 500w,
+                    /img/gallery/workshop3-700.jpg 700w,
+                    /img/gallery/workshop3-900.jpg 900w,
+                    /img/gallery/workshop3-1100.jpg 1100w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/workshop3-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic4">
+            <a href="/img/gallery/workshop4-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/workshop4-300.avif 300w,
+                    /img/gallery/workshop4-500.avif 500w,
+                    /img/gallery/workshop4-700.avif 700w,
+                    /img/gallery/workshop4-900.avif 900w,
+                    /img/gallery/workshop4-1100.avif 1100w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/workshop4-300.jpg 300w,
+                    /img/gallery/workshop4-500.jpg 500w,
+                    /img/gallery/workshop4-700.jpg 700w,
+                    /img/gallery/workshop4-900.jpg 900w,
+                    /img/gallery/workshop4-1100.jpg 1100w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/workshop4-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+        <div class="pic5">
+            <a href="/img/gallery/workshop5-1100.jpg">
+            <picture>
+                <source
+                    type="image/avif"
+                    srcset="
+                    /img/gallery/workshop5-300.avif 300w,
+                    /img/gallery/workshop5-500.avif 500w,
+                    /img/gallery/workshop5-700.avif 700w,
+                    /img/gallery/workshop5-900.avif 900w,
+                    /img/gallery/workshop5-1100.avif 1100w"
+                    sizes="50vw"/>
+                    <source
+                    type="image/jpg"
+                    srcset="
+                    /img/gallery/workshop5-300.jpg 300w,
+                    /img/gallery/workshop5-500.jpg 500w,
+                    /img/gallery/workshop5-700.jpg 700w,
+                    /img/gallery/workshop5-900.jpg 900w,
+                    /img/gallery/workshop5-1100.jpg 1100w"
+                    sizes="50vw"/>
+                    <img src="/img/gallery/workshop5-500.jpg" alt="Group of adults and children sitting on the sand and playing" />
+            </picture>
+            </a>
+        </div>
+    </div>
+</div>
+     
 <style>
-.main {
+.section {
     margin-top: 60px;
+    display:grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+    "hd   hd  hd  hd  hd  hd"
+    "txt  txt txt txt txt txt"
+    "gal  gal gal gal gal gal";
 }
-svg {
-    margin-top: 50px;
-    fill: rgba(255, 255, 255, 0.75);
+@media(min-width: 1000px){
+    .section {
+        margin-bottom: 50px;
+        grid-template-areas:
+        "hd   hd  hd  gal  gal  gal"
+        "txt  txt txt gal gal gal"
+        "txt  txt txt gal gal gal";
+    }
 }
-#beach svg {
-    fill: #c68e5d;
+.heading {
+    grid-area: hd;
+    height: 400px;
+    position: relative;
 }
-.activityHeading {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-}
-.activityImage {
-    height: 300px;
-    width: 50%;
-}
-.activityImage img{
-  object-fit: cover;
+
+.box {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.activityTitle {
-    width: 50%;
-    text-align: center;
+.overlay {
+  z-index: 9;
+  display: flex;
+  align-items: flex-end;
 }
-.activityHeading:hover h1{
-    text-decoration: underline;
-    text-decoration-color: inherit;
+.overlay > h1 {
+    margin-left: 15px;
 }
-
-#beach {
-    background-color: #ffffff;
-}
-#walk {
-    background-color: #8e9fae;
-}
-#workshop {
-    background-color: #c68e5d;
-}
-#beach h1 {
-    color: #c68e5d;
-}
-.expander {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-.activityCard {
-    margin: 50px 0 50px 0;
-    width: 90%;
-    max-width: 1000px;
-}
-
-@media screen and (min-width: 780px) {
-    .activityHeading {
-        height: 50vw;
-    }
-    .activityImage {
-        height: 50vw;
-    }
-}
-p {
+.description {
+    grid-area: txt;
     text-align: justify;
+    padding:50px 10px 50px 25px;
+} 
+.gallery {
+    grid-area: gal;
+    align-self: end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, 300px);
+    grid-gap: 5px;
+    grid-template-areas:
+    "one one"
+    "two two"
+    "three three"
+    "four four"
+    "five five";
+}
+.pic1 {
+    grid-area: one;
+}
+.pic2 {
+    grid-area: two;
+}
+.pic3 {
+    grid-area: three;
+}
+.pic4 {
+    grid-area: four;
+}
+.pic5 {
+    grid-area: five;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height:100%;
 }
 </style>
     

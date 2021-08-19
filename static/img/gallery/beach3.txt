@@ -1,0 +1,56 @@
+
+
+---------------
+IMG TAG
+---------------
+<img
+  width=''
+  height=''
+  sizes='(max-width: 3500px) 40vw, 1400px'
+  srcset='
+    beach3-300.jpg 300w,
+    beach3-500.jpg 500w,
+    beach3-700.jpg 700w,
+    beach3-900.jpg 900w,
+    beach3-1100.jpg 1100w,
+    beach3-1300.jpg 1300w,'
+  src='This should hold the default image'
+  loading='lazy'
+  decoding='async'
+  alt=''>
+
+---------------
+CSSLINK
+---------------
+<link
+  rel='preload'
+  as='image'
+  href='This should hold the default image'
+  srcset='
+    beach3-300.jpg 300w,
+    beach3-500.jpg 500w,
+    beach3-700.jpg 700w,
+    beach3-900.jpg 900w,
+    beach3-1100.jpg 1100w,
+    beach3-1300.jpg 1300w,'
+  imagesizes='50vw'>
+
+---------------
+PICTURE TAG
+---------------
+   A Source for one of avif webp and jxl should also be added
+<picture>
+    <source
+        media='(orientation: landscape)'
+        srcset='
+    beach3-300.jpg 300w,
+    beach3-500.jpg 500w,
+    beach3-700.jpg 700w,
+    beach3-900.jpg 900w,
+    beach3-1100.jpg 1100w,
+    beach3-1300.jpg 1300w,'
+        sizes='(min-width: 60rem) 80vw,
+               (min-width: 40rem) 90vw,
+               100vw'>
+    <img src='This should hold the default image.jpg' alt='Image description'>
+</picture>

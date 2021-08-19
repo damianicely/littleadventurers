@@ -29,15 +29,14 @@
       <h1>Little Adventurers</h1>
       <h2>Outdoor activities and creative Workshops for kids in the Algarve Portugal.</h2>
       <h2>Created from the love of working with kids.</h2>
-      <button>Book Now</button>
+      <a href="/contact"><button>Book Now</button></a>
     </div>
   </div>
 </div>
 
 <div id="group2">
   <div>
-    <h2 class="alternate">The Algarve offers the perfect place to go outside and enjoy the beauty of nature. I
-    want to combine playing and learning for kids.</h2>
+    <h2 class="alternate">The Algarve offers the perfect place to go outside and enjoy the beauty of nature. I love to combine playing and learning for children.</h2>
     <h2 class="alternate">Learn how playing outdoors in nature can benefit your children intellectually,
     socially, emotionally, and physically, and discover activities for fostering their development.</h2>
   </div>
@@ -90,9 +89,9 @@
   <div class="half">
     <div class="quater">
       <h2 class="alternate">Learning through exercise outdoors is main motor for cognitive development
-        In the early years it is about configuring imaginations, there is no creative `wrong`.
+        In the early years it is about configuring imaginations, there is no creative 'wrong'.
         </h2>
-      <h2 class="alternate">I each child to see the beauty, light, forms and patterns in everyday objects.</h2>
+      <h2 class="alternate">I want each child to see the beauty, light, forms and patterns in everyday objects.</h2>
     </div>
     <div class="quater">
       <picture>
@@ -114,10 +113,6 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-.alternate {
-  color: var(--primary-dark);
-  text-align: justify;
 }
 /* Parallax base styles
   --------------------------------------------- */
@@ -166,7 +161,7 @@
   width:100%;
 }
 button {
-  font-family: 'Lora', serif;
+  font-family: 'ClaudeSansPlain-Regular', serif;
   font-style: normal;
   font-weight: 700;
   font-size: 1.5em;
@@ -229,32 +224,8 @@ div.half {
   justify-content: center;
 }
 div.quater {
-  width: 400px;
+  width: clamp(200px, 400px, 100vw);
   padding: 10px;
-}
-.flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 200px;
-}
-@media screen and (min-width: 780px) {
-  .flex-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .alternate-title {
-    width: 70vw;
-    max-width: 1000px;
-  }
 }
 
 

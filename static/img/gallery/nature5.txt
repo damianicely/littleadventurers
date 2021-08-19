@@ -1,0 +1,47 @@
+
+
+---------------
+IMG TAG
+---------------
+<img
+  width=''
+  height=''
+  sizes='(max-width: 3500px) 40vw, 1400px'
+  srcset='
+    nature5-300.jpg 300w,
+    nature5-500.jpg 500w,
+    nature5-700.jpg 700w,'
+  src='This should hold the default image'
+  loading='lazy'
+  decoding='async'
+  alt=''>
+
+---------------
+CSSLINK
+---------------
+<link
+  rel='preload'
+  as='image'
+  href='This should hold the default image'
+  srcset='
+    nature5-300.jpg 300w,
+    nature5-500.jpg 500w,
+    nature5-700.jpg 700w,'
+  imagesizes='50vw'>
+
+---------------
+PICTURE TAG
+---------------
+   A Source for one of avif webp and jxl should also be added
+<picture>
+    <source
+        media='(orientation: landscape)'
+        srcset='
+    nature5-300.jpg 300w,
+    nature5-500.jpg 500w,
+    nature5-700.jpg 700w,'
+        sizes='(min-width: 60rem) 80vw,
+               (min-width: 40rem) 90vw,
+               100vw'>
+    <img src='This should hold the default image.jpg' alt='Image description'>
+</picture>

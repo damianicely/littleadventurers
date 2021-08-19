@@ -8,8 +8,14 @@ IMG TAG
   height=''
   sizes='(max-width: 3500px) 40vw, 1400px'
   srcset='
-    workshop-1800.jpg 1800w,
-    workshop-2000.jpg 2000w,'
+    workshop-400.jpg 400w,
+    workshop-500.jpg 500w,
+    workshop-600.jpg 600w,
+    workshop-700.jpg 700w,
+    workshop-800.jpg 800w,
+    workshop-900.jpg 900w,
+    workshop-1000.jpg 1000w,
+    workshop-1100.jpg 1100w,'
   src='This should hold the default image'
   loading='lazy'
   decoding='async'
@@ -23,8 +29,14 @@ CSSLINK
   as='image'
   href='This should hold the default image'
   srcset='
-    workshop-1800.jpg 1800w,
-    workshop-2000.jpg 2000w,'
+    workshop-400.jpg 400w,
+    workshop-500.jpg 500w,
+    workshop-600.jpg 600w,
+    workshop-700.jpg 700w,
+    workshop-800.jpg 800w,
+    workshop-900.jpg 900w,
+    workshop-1000.jpg 1000w,
+    workshop-1100.jpg 1100w,'
   imagesizes='50vw'>
 
 ---------------
@@ -35,8 +47,14 @@ PICTURE TAG
     <source
         media='(orientation: landscape)'
         srcset='
-    workshop-1800.jpg 1800w,
-    workshop-2000.jpg 2000w,'
+    workshop-400.jpg 400w,
+    workshop-500.jpg 500w,
+    workshop-600.jpg 600w,
+    workshop-700.jpg 700w,
+    workshop-800.jpg 800w,
+    workshop-900.jpg 900w,
+    workshop-1000.jpg 1000w,
+    workshop-1100.jpg 1100w,'
         sizes='(min-width: 60rem) 80vw,
                (min-width: 40rem) 90vw,
                100vw'>

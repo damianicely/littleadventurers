@@ -1,87 +1,78 @@
 @font-face {
-  font-family: Bodoni;
-  src: url("/fonts/bodoni.woff2") format("woff2");
+  font-family: 'Merriweather-Regular';
+  src: url(/fonts/Merriweather-Regular.woff2);
+  font-display: swap;
 }
 @font-face {
-font-family: Lora;
-src: url("/fonts/Lora-Regular.woff2") format("woff2");
+  font-family: 'ClaudeSansPlain-Regular';
+  src: url(/fonts/ClaudeSansPlain-Regular.woff2);
+  font-display: swap;
 }
 
 :root {
 	padding: 0;
 	margin: 0;
-	font-family: Lora, Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --pure-white: #ffffff;
   --background: #dcd4bc;
 	--primary-dark: #ac8868;
-	--primary-light: rgba(255, 255, 255, 0.75);
+	--primary-light: rgba(255, 255, 255, 0.75); 
   --blue: #8e9fae;
 	--secondary-color: #d0dde9;
 	--body-color: #f6f5f0;
 	--text-color: #444444;
   --section-gap: 70px;
   --dark-green: #32433d;
-  --dark-brown: ac8868;
+  --dark-brown: #ac8868;
   --old-dark: rgb(198, 142, 93);
-
+}
+* {
+  margin:0;
+  padding:0;
 }
 body, html {
 	background-color:var(--background);
   width: 100%;
 	height: 100%;
-  margin: 0;
-	padding: 0;
 }
-
-* {
-  margin:0;
-  padding:0;
-}
-
 h1 {
-    font-family: "Bodoni", serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3em;
+    font-family: 'Merriweather-Regular';
+    font-size: 3.5em;
     color: var(--primary-light);
-}
-
+  }
 h2 {
-    font-family: 'Lora', serif;
+    font-family: 'ClaudeSansPlain-Regular', serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color:  var(--primary-light);
     margin-bottom: 20px;
-}
+  }
 
 p {
+  font-family: 'Merriweather-Regular', serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 1.2em;
+  margin-bottom: 20px;
 }
-
+.alternate {
+  color: var(--primary-dark);
+  text-align: justify;
+}
 div.fullwidth {
   width: 90vw;
 }
 .hidden {
   display: none;
 }
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 6em;
+  }
+  h2 {
+    font-size: 2em;
+  }
 
-.blogpost img {
-  max-width: 100%;
-  height: auto;
-  padding: 40px 0px;
-}
-.blogpost p{
-  margin: 20px 0px;
-  font-family: 'Lora', serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.1em;
-  text-align: justify;
-  color: rgba(41, 35, 35, 0.75);      
-}
-@media screen and (min-width: 780px) {
   p {
       font-size: 1.5em;
   }
