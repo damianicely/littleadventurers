@@ -1,0 +1,96 @@
+{
+  ".svelte-kit/build/runtime/internal/start.js": {
+    "file": "start-3ed04841.js",
+    "src": ".svelte-kit/build/runtime/internal/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-dac554f8.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/build/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/activities.svelte",
+      "src/routes/contact.svelte",
+      "src/routes/about.svelte"
+    ],
+    "css": [
+      "assets/start-61d1577b.css"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-4da571c8.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-dac554f8.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-9e689638.css"
+    ],
+    "assets": [
+      "assets/logo-1b4a0ec6.svg"
+    ]
+  },
+  ".svelte-kit/build/components/error.svelte": {
+    "file": "error.svelte-f5faeafa.js",
+    "src": ".svelte-kit/build/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-dac554f8.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-4621d7df.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-dac554f8.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-e155d3f0.css"
+    ]
+  },
+  "src/routes/activities.svelte": {
+    "file": "pages/activities.svelte-2f8007a2.js",
+    "src": "src/routes/activities.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-dac554f8.js"
+    ],
+    "css": [
+      "assets/pages/activities.svelte-d080f3e2.css"
+    ]
+  },
+  "src/routes/contact.svelte": {
+    "file": "pages/contact.svelte-4349d165.js",
+    "src": "src/routes/contact.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-dac554f8.js"
+    ],
+    "css": [
+      "assets/pages/contact.svelte-0c58b548.css"
+    ]
+  },
+  "src/routes/about.svelte": {
+    "file": "pages/about.svelte-e3a2e489.js",
+    "src": "src/routes/about.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-dac554f8.js"
+    ],
+    "css": [
+      "assets/pages/about.svelte-b75f7008.css"
+    ]
+  },
+  "_vendor-dac554f8.js": {
+    "file": "chunks/vendor-dac554f8.js"
+  }
+}

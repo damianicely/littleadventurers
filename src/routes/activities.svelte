@@ -318,7 +318,6 @@
 </div>
 
 <div class="section">
-    <a href="#workshop"></a>
     <div class="heading">
         <div class="box">
             <picture>
