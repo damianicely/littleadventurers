@@ -8,28 +8,27 @@
       <source type="image/avif" srcset='/img/logBalance-665.avif 665w' media="(max-width: 1000px)" sizes='100vw'>
       <source type="image/jpg" srcset='/img/logBalance-665.jpg 665w' media="(max-width: 1000px)" sizes='100vw'>
       <source type="image/avif" srcset='
-                                      /img/walkOnBeach-1000.avif 1000w,
-                                      /img/walkOnBeach-1200.avif 1200w,
-                                      /img/walkOnBeach-1400.avif 1400w,
-                                      /img/walkOnBeach-1600.avif 1600w,
-                                      /img/walkOnBeach-1800.avif 1800w,
-                                      /img/walkOnBeach-2000.avif 2000w,' media="(min-width: 1000px)" sizes='100vw'>
+                                      /img/walkOnBeachO-1000.avif 1000w,
+                                      /img/walkOnBeachO-1200.avif 1200w,
+                                      /img/walkOnBeachO-1400.avif 1400w,
+                                      /img/walkOnBeachO-1600.avif 1600w,
+                                      /img/walkOnBeachO-1800.avif 1800w,
+                                      /img/walkOnBeachO-2000.avif 2000w,' media="(min-width: 1000px)" sizes='100vw'>
       <source type="image/jpg" srcset='
-                                      /img/walkOnBeach-1000.jpg 1000w,
-                                      /img/walkOnBeach-1200.jpg 1200w,
-                                      /img/walkOnBeach-1400.jpg 1400w,
-                                      /img/walkOnBeach-1600.jpg 1600w,
-                                      /img/walkOnBeach-1800.jpg 1800w,
-                                      /img/walkOnBeach-2000.jpg 2000w,' media="(min-width: 1000px)" sizes='100vw'>
+                                      /img/walkOnBeachO-1000.jpg 1000w,
+                                      /img/walkOnBeachO-1200.jpg 1200w,
+                                      /img/walkOnBeachO-1400.jpg 1400w,
+                                      /img/walkOnBeachO-1600.jpg 1600w,
+                                      /img/walkOnBeachO-1800.jpg 1800w,
+                                      /img/walkOnBeachO-2000.jpg 2000w,' media="(min-width: 1000px)" sizes='100vw'>
       <img src='/img/logBalance-665.jpg' width="100vw" height="100%" alt='vortex of leaves blown around smiling child'>
     </picture>
   </div>
   <div class="parallax__layer parallax__layer--fore">
     <div class="title">
       <h1>Little Adventurers</h1>
-      <h2>Outdoor activities and creative Workshops for kids in the Algarve Portugal.</h2>
-      <h2>Created from the love of working with kids.</h2>
       <a href="/contact"><button>Book Now</button></a>
+      <h2>Outdoor activities and creative Workshops for kids in the Algarve Portugal.<br>Created from the love of working with kids.</h2>
     </div>
   </div>
 </div>
@@ -80,9 +79,9 @@
     </div>
     <div class="quater">
       <picture>
-        <source type="image/avif"srcset='/img/climbTree-400.avif 400w' sizes='400px'>
-        <source type="image/jpg"srcset='/img/climbTree-400.jpg 400w' sizes='400px'>
-        <img src='/img/climbTree-400.jpg' width="400px" height="400px" alt='two children climbing a tree'>
+        <source type="image/avif"srcset='/img/dandylion-400.avif 400w' sizes='400px'>
+        <source type="image/jpg"srcset='/img/dandylion-400.jpg 400w' sizes='400px'>
+        <img src='/img/dandylion-400.jpg' width="400px" height="400px" alt='two children climbing a tree'>
       </picture>
     </div>
   </div>
@@ -95,9 +94,9 @@
     </div>
     <div class="quater">
       <picture>
-        <source type="image/avif"srcset='/img/leaves-400.avif 400w' sizes='400px'>
-        <source type="image/jpg"srcset='/img/leaves-400.jpg 400w' sizes='400px'>
-        <img src='/img/leaves-400.jpg' width="400px" height="400px" alt='vortex of leaves blown around smiling child'>
+        <source type="image/avif"srcset='/img/watering-400.avif 400w' sizes='400px'>
+        <source type="image/jpg"srcset='/img/watering-400.jpg 400w' sizes='400px'>
+        <img src='/img/watering-400.jpg' width="400px" height="400px" alt='vortex of leaves blown around smiling child'>
       </picture>
     </div>
   
@@ -111,8 +110,17 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -30%);
+  transform: translate(-50%, -30%);
+}
+.title h1{
+  margin-bottom: 20px;
+}
+.title h2{
+  margin-top: 40px;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
 }
 /* Parallax base styles
   --------------------------------------------- */
@@ -168,12 +176,13 @@ button {
   border: 3px solid var(--primary-light);
   padding: 15px 30px;
   color: var(--primary-light);
-  background-color: transparent;
+  background-color: var(--primary-dark);
   transition-duration: 0.4s;
 }
 button:hover {
   color: oldlace;
   background-color: var(--primary-dark);
+  text-decoration: underline;
 }
 
 #group2 {
