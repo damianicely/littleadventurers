@@ -35,7 +35,7 @@
         <p>Aside from the obligatory sandcastle building and paddling there are many other fun and creative beach activities that the kids will love.</p>
         <p>"Kids and adults often have different wants and motivations at the beach. Kids use beach time as an opportunity to run, swim and play while parents often want to use a beach trip for a much-needed time to relax," explains Dan DeFigio, author of "Beach Games for Kids."</p>
         <p>"Staying active is one of the best ways for kids to beat boredom at the beach. Sand and water make a different environment than the typical backyard, so kids can explore while having fun."</p>
-        <p>Check the dates and sign up your kids for some beach fun!</p>   
+        <p><a href="https://www.instagram.com/little__adventurers/"> Check our Instagram for the next dates</a> and sign up your kids for some beach fun!</p>   
     </div>
     <div class="gallery">
         <div class="pic1">
@@ -206,7 +206,7 @@
         <h2 class="alternate">Getting outside is a great way to learn more about the environment and is vital for the kids well-being.</h2>
         <p>Having fun and enjoying life, curiosity, the joy of discovery and spontaneity is in my work the priorities for education in order to have healthy, active and life-affirming children. Nature offers the ideal conditions for that.</p>
         <p>Kids love to play in nature. Every sensory perception is nourishment for the brain, whether balancing over trees roots, exploring nature, run, walk…</p>
-        <p>I offer different activities in nature, check the dates!</p>       
+        <p><a href="https://www.instagram.com/little__adventurers/"> Check our Instagram for the next dates</a> </p>       
     </div>
     <div class="gallery">
         <div class="pic1">
@@ -357,7 +357,7 @@
         <h2 class="alternate">Get together and let the kids express themselves freely and discover the creative spirit!</h2>
         <p>I offer creative workshops in the “ Studio Coracao” in Vila do Bispo.</p>
         <p>Whether it’s drawing, painting, cutting, pasting, modelling, making or make believe, all children love being creative if they’re given the chance. And there’s so many important developmental benefits of creative play, why wouldn’t you want to encourage it. I want to create a space for kids where they can be creative and have fun. 
-            Check the dates for more info. </p>
+           <a href="https://www.instagram.com/little__adventurers/"> Check our Instagram for the next dates</a> </p>
     </div>
     <div class="gallery">
         <div class="pic1">
@@ -489,87 +489,87 @@
 </div>
      
 <style>
-.section {
-    margin-top: 60px;
-    display:grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-areas:
-    "hd   hd  hd  hd  hd  hd"
-    "txt  txt txt txt txt txt"
-    "gal  gal gal gal gal gal";
-}
-@media(min-width: 1000px){
     .section {
-        margin-bottom: 50px;
+        margin-top: 60px;
+        display:grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(100px, auto);
         grid-template-areas:
-        "hd   hd  hd  gal  gal  gal"
-        "txt  txt txt gal gal gal"
-        "txt  txt txt gal gal gal";
+        "hd   hd  hd  hd  hd  hd"
+        "txt  txt txt txt txt txt"
+        "gal  gal gal gal gal gal";
     }
-}
-.heading {
-    grid-area: hd;
-    height: 400px;
-    position: relative;
-}
+    @media(min-width: 1000px){
+        .section {
+            margin-bottom: 50px;
+            grid-template-areas:
+            "hd   hd  hd  gal  gal  gal"
+            "txt  txt txt gal gal gal"
+            "txt  txt txt gal gal gal";
+        }
+    }
+    .heading {
+        grid-area: hd;
+        height: 400px;
+        position: relative;
+    }
 
-.box {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.overlay {
-  z-index: 9;
-  display: flex;
-  align-items: flex-end;
-}
-.overlay > h1 {
-    margin-left: 15px;
-}
-.description {
-    grid-area: txt;
-    text-align: justify;
-    padding:50px 10px 50px 25px;
-} 
-.gallery {
-    grid-area: gal;
-    align-self: end;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(100px, 300px);
-    grid-gap: 5px;
-    grid-template-areas:
-    "one one"
-    "two two"
-    "three three"
-    "four four"
-    "five five";
-}
-.pic1 {
-    grid-area: one;
-}
-.pic2 {
-    grid-area: two;
-}
-.pic3 {
-    grid-area: three;
-}
-.pic4 {
-    grid-area: four;
-}
-.pic5 {
-    grid-area: five;
-}
-img{
-    object-fit: cover;
+    .box {
     width: 100%;
-    height:100%;
-}
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+
+    .overlay {
+    z-index: 9;
+    display: flex;
+    align-items: flex-end;
+    }
+    .overlay > h1 {
+        margin-left: 15px;
+    }
+    .description {
+        grid-area: txt;
+        text-align: justify;
+        padding:50px 10px 50px 25px;
+    } 
+    .gallery {
+        grid-area: gal;
+        align-self: end;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, 300px);
+        grid-gap: 5px;
+        grid-template-areas:
+        "one one"
+        "two two"
+        "three three"
+        "four four"
+        "five five";
+    }
+    .pic1 {
+        grid-area: one;
+    }
+    .pic2 {
+        grid-area: two;
+    }
+    .pic3 {
+        grid-area: three;
+    }
+    .pic4 {
+        grid-area: four;
+    }
+    .pic5 {
+        grid-area: five;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+        height:100%;
+    }
 </style>
     
     
